@@ -16,11 +16,11 @@ function App() {
     });
   }, []);
 
-  // if (!user) return <Login onLogin={setUser} />;
+  if (!user) return <Login onLogin={setUser} />;
   return (
     <div>
-      {loginState ? <Home user = {user}/> : <Login setUser={setUser} setLoginState = {setLoginState} />}
-      {/* <Home user = {user}/> */}
+      {/* {loginState ? <Home user = {user}/> : <Login setUser={setUser} setLoginState = {setLoginState} />} */}
+      <Home user = {user}/>
     </div>
   );
 }
