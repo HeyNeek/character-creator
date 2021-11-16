@@ -13,7 +13,9 @@ puts "Seeding Race data..."
 # test user
 puts "Seeding User data..."
 
-# User.create(username: 'test', password: "password", image_url: "https://cdn.shopify.com/s/files/1/1158/2192/products/One-punch-man-saitama-ok-decal-white_1024x1024.jpg?v=1455425409")
+
+# User.create(username: 'test', password_digest: "password", image_url: "https://cdn.shopify.com/s/files/1/1158/2192/products/One-punch-man-saitama-ok-decal-white_1024x1024.jpg?v=1455425409")
+# User.create(username: 'test2', password: "password", image_url: "https://cdn.shopify.com/s/files/1/1158/2192/products/One-punch-man-saitama-ok-decal-white_1024x1024.jpg?v=1455425409")
 
 #test character
 puts "Seeding PC data..."
