@@ -2,12 +2,12 @@ class PlayerCharactersController < ApplicationController
     
     def index
         characters = PlayerCharacter.all
-        render json: character.name
+        render json: characters
     end
 
     def show
         character = PlayerCharacter.find(params[:id])
-        render json: character
+        render json: character, serializer: PlayerCharacterDetailsSerializer
     end 
 
     def create

@@ -1,3 +1,3 @@
 class Race < ApplicationRecord
-    has_one :player_character
+    has_many :player_character
 end
