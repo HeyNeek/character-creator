@@ -1,14 +1,10 @@
+import React from 'react';
 
 export default function Home(){
    
     return(
     <div>
-        <form>
-            User:
-            <input/>
-             Password: 
-            <input/>
-        </form>
+        <h1>Hi!</h1>
     </div>
     );
 

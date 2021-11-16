@@ -18,6 +18,6 @@ User.create(username: 'test', password_digest: "password", image_url: "https://c
 #test character
 puts "Seeding PC data..."
 
-PlayerCharacter.create(user_id: 1, race_id: 3, name: "Vaxildon", image_url: "https://static.wikia.nocookie.net/criticalrole/images/4/4e/Vaxildan2.png/revision/latest?cb=20151228163354", strength: 11, dex: 16, con: 14, intel: 9, wisdom: 14, charisma: 17)
+# PlayerCharacter.create(user_id: 1, race_id: 3, name: "Vaxildon", image_url: "https://static.wikia.nocookie.net/criticalrole/images/4/4e/Vaxildan2.png/revision/latest?cb=20151228163354", strength: 11, dex: 16, con: 14, intel: 9, wisdom: 14, charisma: 17)
 
 puts 'Done!'
