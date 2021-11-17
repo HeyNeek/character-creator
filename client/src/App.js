@@ -8,7 +8,6 @@ import Navbar from './components/Navbar';
 
 function App() {
   const [user, setUser] = useState(null);
-  const [page, setPage] = useState("/");
 
   useEffect(() => {
     // auto-login
@@ -25,7 +24,7 @@ function App() {
   if (!user) return <Login setUser={setUser} />;
   return (
     <div>
-      <Navbar setPage = {setPage}/>
+      <Navbar setUser = {setUser}/>
       <Switch>
           <Route path="/create">
             <Create />
@@ -34,7 +33,7 @@ function App() {
             <Gallery />
           </Route>
           <Route exact path="/">
-            <Home user = {user} setUser = {setUser}/>
+            <Home user = {user}/>
           </Route>
           <Route path="*">
             <h1>404 not found</h1>

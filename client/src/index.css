@@ -19,6 +19,8 @@ code {
 
 #currentCharactersHome {
   text-align: center;
+  font-size: 75px;
+  font-family: 'EnchantedLand';
 }
 
 #userGreeting {
@@ -26,11 +28,7 @@ code {
 }
 
 #logoutButton {
-  justify-content: center;
-}
-
-#buttonContainer {
-  text-align: center;
+  float: right;
 }
 
 body {
@@ -41,4 +39,17 @@ body {
 
 #navbar {
   text-align: center;
+  font-family: 'EnchantedLand';
+}
+
+.navlink {
+  font-size: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'EnchantedLand';
+  src: url(Enchanted\ Land.otf);
 }
