@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   const [user, setUser] = useState(null);
+  const [characterList, setCharacterList] = useState([])
 
   useEffect(() => {
     // auto-login
@@ -15,6 +16,8 @@ function App() {
       if (r.ok) {
         r.json().then((user) => {console.log(user)
           setUser(user)
+          setCharacterList(user.player_characters)
+          console.log(characterList)
         });
         
       }
@@ -33,7 +36,7 @@ function App() {
             <Gallery />
           </Route>
           <Route exact path="/">
-            <Home user = {user}/>
+            <Home user = {user} characterList = {characterList}/>
           </Route>
           <Route path="*">
             <h1>404 not found</h1>
