@@ -47,7 +47,7 @@ function App() {
           <Route path="*">
             <h1>404 not found</h1>
           </Route>
-        </Switch>
+      </Switch>
     </div>
   );
 }

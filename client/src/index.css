@@ -39,6 +39,7 @@ code {
   text-decoration: none;
   font-size: 25px;
   font-family: 'EnchantedLand';
+  cursor: pointer;
 }
 
 #logoutButton:hover {
@@ -148,6 +149,7 @@ body {
   text-decoration: none;
   font-size: 25px;
   font-family: 'ComicRunes';
+  cursor: pointer;
 }
 
 #loginButton:hover {
@@ -183,6 +185,7 @@ body {
   text-decoration: none;
   font-size: 25px;
   font-family: 'hobbit';
+  cursor: pointer;
 }
 
 #signUpButton:hover {
@@ -214,6 +217,7 @@ body {
   font-size: 25px;
   font-family: 'firstorder3d';
   border-color: red;
+  cursor: pointer;
 }
 
 .landingPageButtons:hover{
@@ -234,4 +238,40 @@ body {
 @font-face {
   font-family: 'hobbit';
   src: url(hobbitonbrushhand.ttf);
+}
+
+#bird1 {
+  position: absolute;
+  left: -30%;
+  top: 200px;
+  animation: move 5s linear 5s infinite;
+  width: 150px;
+  z-index: -1;
+}
+
+#bird2 {
+  position: absolute;
+  left: -30%;
+  top: 500px;
+  animation: move 8s linear 0s infinite;
+  width: 150px;
+  z-index: -1;
+}
+
+#bird3 {
+  top: 650px;
+  left: -30%;
+  position: absolute;
+  animation: move 11s linear 1s infinite;
+  width: 150px;
+  z-index: -1;
+}
+
+@keyframes move {
+  from {
+    left: -30%;
+  }
+  to {
+    left: 100%;
+  }
 }
