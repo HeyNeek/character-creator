@@ -25,7 +25,7 @@ export default function Login({setUser}){
     }
    
     return(
-    <div>
+    <div id="loginPage">
         <form>
             Username:
             <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>

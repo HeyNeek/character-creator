@@ -14,4 +14,31 @@ code {
 
 .userphoto {
   height: 50px;
+  padding-left: 10px;
+}
+
+#currentCharactersHome {
+  text-align: center;
+}
+
+#userGreeting {
+  text-align: center;
+}
+
+#logoutButton {
+  justify-content: center;
+}
+
+#buttonContainer {
+  text-align: center;
+}
+
+body {
+  background-image: url("https://cdn.wallpapersafari.com/83/25/mOF5Zt.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#navbar {
+  text-align: center;
 }

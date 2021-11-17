@@ -15,11 +15,14 @@ export default function Home({user, setUser}){
    
     return(
     <div>
-        <span>Hi {user.username}!</span> <img class = "userphoto" src={user.image_url}/>
-        <button onClick={logoutHandler}>Logout</button>
+        <h2 id="userGreeting">Hi {user.username}!<img className = "userphoto" src={user.image_url}/></h2>
+        <br/>
+        <div id="buttonContainer">
+            <button id="logoutButton" onClick={logoutHandler}>Logout</button>
+        </div>
 
         {/* mapping here */}
-        <h1> Your current characters </h1>
+        <h1 id="currentCharactersHome"> Your current characters </h1>
 
       {characterlist}
     </div>

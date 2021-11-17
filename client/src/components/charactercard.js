@@ -7,7 +7,7 @@ export default function Charactercard({character}){
     return(
     <div>
         {character.name} {character.race.name} 
-        <img class = "userphoto" src={character.image_url}/>
+        <img className = "userphoto" src={character.image_url}/>
         
     </div>
     );
