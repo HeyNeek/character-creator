@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Login from './Login';
 import SignUp from './SignUp';
 
-function LandingPage(setUser, setCharacterList){
+function LandingPage({setUser, setCharacterList}){
 
     const [pageState, setPageState] = useState(null);
 
