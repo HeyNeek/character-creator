@@ -24,6 +24,7 @@ class PlayerCharactersController < ApplicationController
     def destroy
         character = PlayerCharacter.find_by(id: params[:id])
         character.destroy
+        render json: character
     end
     
     private

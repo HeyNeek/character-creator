@@ -9,6 +9,7 @@ export default function CharacterDetails({refresh}) {
     const [newImage, setNewImage] = useState("")
     const [updating, setUpdating] = useState(null)
     const {id} = useParams();
+    const history = useHistory();
 
     useEffect(()=> {
         fetch(`/player_characters/${id}`)
@@ -38,8 +39,32 @@ function updateCharacter(e){
     })
 }
 
-function deleteCharacter(e){
-    e.preventDefault()
+// function handleDelete() {
+//     fetch(`https://grannycb2.herokuapp.com/recipes/${recipe.id}`, {
+//       method: "DELETE",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//     })
+//       .then((resp) => resp.json())
+//       .then(() => {
+//         deleteRecipe(recipe.id);
+//         history.push(`/`);
+//       });
+//   }
+// /player_characters/${id}
+function deleteCharacter(){
+    fetch(`/player_characters/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((resp) => resp.json())
+      .then(() => {
+        refresh();
+        history.push(`/`);
+      });
 }
 
     return(
@@ -61,6 +86,8 @@ function deleteCharacter(e){
             <h3>Inteligence: {character.intel}</h3>
             <h3>Wisdom: {character.wisdom} </h3>
             <h3>Charisma: {character.charisma}</h3>
+
+            <button onClick={deleteCharacter}>🗑️ </button>
         </div>
     )
     
