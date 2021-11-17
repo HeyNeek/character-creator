@@ -28,10 +28,10 @@ export default function Login({setUser}){
     <div id="loginPage">
         <form>
             Username:
-            <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+            <input className="inputFields" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
              Password: 
-            <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-            <button onClick={handleSubmit}>Login!</button>
+            <input className="inputFields" type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+            <button id="loginButton" onClick={handleSubmit}>Login!</button>
         </form>
     </div>
     );

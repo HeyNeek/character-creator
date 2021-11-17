@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,7 +10,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
 .userphoto {
   height: 50px;
@@ -31,7 +31,7 @@ code {
 
 #logoutButton {
   float: right;
-  background-color: black; /* Green */
+  background-color: black; 
   border: none;
   color: white;
   padding: 15px 32px;
@@ -46,6 +46,7 @@ code {
 }
 
 body {
+  margin: 0;
   background-image: url("https://cdn.wallpapersafari.com/83/25/mOF5Zt.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -78,4 +79,62 @@ body {
 @font-face {
   font-family: 'EnchantedLand';
   src: url(Enchanted\ Land.otf);
+}
+
+@font-face {
+  font-family: 'RUNE';
+  src: url(RUNE.TTF);
+}
+
+@font-face {
+  font-family: 'ComicRunes';
+  src: url(ComicRunes.otf);
+}
+
+#loginPage {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 72px 55px 90px 55px;
+  text-align: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  height: 400px;
+  font-family: 'ComicRunes';
+  background-image: url(https://ak.picdn.net/shutterstock/videos/3874394/thumb/1.jpg);
+  background-size: cover;
+  font-size: 50px;
+}
+
+.inputFields{
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  line-height: 1.2;
+  background: transparent;
+  border-color: black;
+  text-align: center;
+  font-family: 'IM Fell DW Pica', serif;
+  color: black;
+  font-family: 'ComicRunes';
+}
+
+#loginButton {
+  background-color: black; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'ComicRunes';
+}
+
+#loginButton:hover {
+  color: red;
 }
