@@ -48,7 +48,7 @@ function deleteCharacter(e){
             <img src = {character.image_url}/> <button onClick={() => setUpdating(prev => !prev)}>
                 {updating ? "Cancel" : "Change Image"}  </button><br/>  
             {updating ?<form onSubmit={(e) => updateCharacter(e)}> <input value = {newImage} onChange={(e)=>setNewImage(e.target.value)}/><button> submit</button></form> : null   
-            }}
+            }
             Player : {user.username} 
             <img className = "userphoto" src = {user.image_url}/> 
             Race: {race.name}
