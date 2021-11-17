@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Create from './components/Create';
 import Gallery from './components/Gallery';
 import Navbar from './components/Navbar';
+import LandingPage from './components/LandingPage';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -24,7 +25,7 @@ function App() {
     });
   }, []);
 
-  if (!user) return <Login setUser={setUser} setCharacterList = {setCharacterList} />;
+  if (!user) return <LandingPage setUser={setUser} setCharacterList = {setCharacterList} />;
   return (
     <div>
       <Navbar setUser = {setUser}/>
