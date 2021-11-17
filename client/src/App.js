@@ -30,7 +30,7 @@ function App() {
       <Navbar setUser = {setUser}/>
       <Switch>
           <Route path="/create">
-            <Create />
+            <Create user = {user}/>
           </Route>
           <Route path="/gallery">
             <Gallery />
