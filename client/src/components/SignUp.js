@@ -31,9 +31,9 @@ export default function SignUp({setUser, setCharacterList}){
     <div id="signUpPage">
         <form>
             Username:
-            <input className="inputFields" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+            <input className="inputFieldsSignUp" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
              Password: 
-            <input className="inputFields" type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+            <input className="inputFieldsSignUp" type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
             <button id="signUpButton" onClick={handleSubmit}>Sign Up!</button>
         </form>
     </div>

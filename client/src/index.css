@@ -97,7 +97,7 @@ body {
   overflow: hidden;
   padding: 72px 55px 90px 55px;
   text-align: center;
-  position: absolute;
+  position: relative;
   margin: auto;
   top: 0;
   right: 0;
@@ -122,6 +122,21 @@ body {
   font-family: 'IM Fell DW Pica', serif;
   color: black;
   font-family: 'ComicRunes';
+  font-size: 30px
+}
+
+.inputFieldsSignUp{
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  line-height: 1.2;
+  background: transparent;
+  border-color: black;
+  text-align: center;
+  font-family: 'IM Fell DW Pica', serif;
+  color: black;
+  font-family: 'hobbit';
+  font-size: 30px;
 }
 
 #loginButton {
@@ -145,7 +160,7 @@ body {
   overflow: hidden;
   padding: 72px 55px 90px 55px;
   text-align: center;
-  position: absolute;
+  position: relative;
   margin: auto;
   top: 0;
   right: 0;
