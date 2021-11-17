@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-export default function Login({setUser}){
+export default function Login({setUser, setCharacterList}){
     const [username, setUsername] = useState(null);
     const [password, setPassword] = useState(null);
     const [errors, setErrors] = useState([]);
@@ -16,7 +16,10 @@ export default function Login({setUser}){
             body: JSON.stringify({ username, password }),
           }).then((r) => {
             if (r.ok) {
-              r.json().then((user) => setUser(user));
+              r.json().then((user) => {
+                setCharacterList(user.player_characters)
+                setUser(user)
+              });
             } else {
               r.json().then((err) => setErrors(err.errors));
             }

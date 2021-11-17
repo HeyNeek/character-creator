@@ -24,7 +24,7 @@ function App() {
     });
   }, []);
 
-  if (!user) return <Login setUser={setUser} />;
+  if (!user) return <Login setUser={setUser} setCharacterList = {setCharacterList} />;
   return (
     <div>
       <Navbar setUser = {setUser}/>
@@ -36,7 +36,7 @@ function App() {
             <Gallery />
           </Route>
           <Route exact path="/">
-            <Home user = {user} characterList = {characterList}/>
+            <Home user = {user} characterList = {characterList} />
           </Route>
           <Route path="*">
             <h1>404 not found</h1>
