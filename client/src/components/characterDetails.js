@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom"
 import { useHistory } from 'react-router';
-import Charactercard from './charactercard';
 
-export default function CharacterDetails() {
+export default function CharacterDetails({refresh}) {
     const [character, setCharacter] = useState([])
     const [race, setRace] = useState([])
     const [user, setUser] = useState([])
+    const [newImage, setNewImage] = useState("")
     const [updating, setUpdating] = useState(null)
     const {id} = useParams();
 
@@ -20,14 +20,35 @@ export default function CharacterDetails() {
         })
 }, [])
 
-function updateCharacter(){
 
+
+function updateCharacter(e){
+    e.preventDefault()
+    fetch(`/player_characters/${id}`, {
+        method: "PATCH",
+        headers: {"Content-Type": "application/json",},
+        body: JSON.stringify({image_url: newImage}),
+    })
+    .then((r)=> r.json())
+    .then((data) => {console.log(data)
+        setCharacter(data)
+        // setRace(data.race)
+        // setUser(data.user)
+        refresh()
+    })
+}
+
+function deleteCharacter(e){
+    e.preventDefault()
 }
 
     return(
         <div>
             <h1>{character.name}</h1>
-            <img src = {character.image_url}/> <button> Change Image </button><br/>  
+            <img src = {character.image_url}/> <button onClick={() => setUpdating(prev => !prev)}>
+                {updating ? "Cancel" : "Change Image"}  </button><br/>  
+            {updating ?<form onSubmit={(e) => updateCharacter(e)}> <input value = {newImage} onChange={(e)=>setNewImage(e.target.value)}/><button> submit</button></form> : null   
+            }}
             Player : {user.username} 
             <img className = "userphoto" src = {user.image_url}/> 
             Race: {race.name}

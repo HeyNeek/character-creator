@@ -19,6 +19,20 @@ function App() {
 
   useEffect(() => {
     // auto-login
+    // fetch("/me").then((r) => {
+    //   if (r.ok) {
+    //     r.json().then((user) => {console.log(user)
+    //       setUser(user)
+    //       setCharacterList(user.player_characters)
+    //       console.log(characterList)
+    //     });
+        
+    //   }
+    // });
+    refresh()
+  }, []);
+
+  function refresh(){
     fetch("/me").then((r) => {
       if (r.ok) {
         r.json().then((user) => {console.log(user)
@@ -28,8 +42,9 @@ function App() {
         });
         
       }
-    });
-  }, []);
+    })
+    // console.log("clicked")
+  }
 
   if (!user) return <LandingPage setUser={setUser} setCharacterList = {setCharacterList} />;
   return (
@@ -37,7 +52,7 @@ function App() {
       <Navbar setUser = {setUser}/>
       <Switch>
       <Route path ="/character/:id"> 
-          <CharacterDetails/>
+          <CharacterDetails refresh = {refresh}/>
         </Route>
           <Route path="/create">
             <Create user = {user} addCharacter = {addCharacter}/>

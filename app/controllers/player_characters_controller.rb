@@ -14,6 +14,12 @@ class PlayerCharactersController < ApplicationController
         character = PlayerCharacter.create!(character_params)
         render json: character
     end
+    
+    def update
+        character = PlayerCharacter.find_by(id: params[:id])
+        character.update(character_params)
+        render json: character, serializer: PlayerCharacterDetailsSerializer
+    end
 
     def destroy
         character = PlayerCharacter.find_by(id: params[:id])
