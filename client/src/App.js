@@ -6,6 +6,7 @@ import Create from './components/Create';
 import Gallery from './components/Gallery';
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
+import CharacterDetails from './components/characterDetails';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -35,6 +36,9 @@ function App() {
     <div>
       <Navbar setUser = {setUser}/>
       <Switch>
+      <Route path ="/character/:id"> 
+          <CharacterDetails/>
+        </Route>
           <Route path="/create">
             <Create user = {user} addCharacter = {addCharacter}/>
           </Route>
