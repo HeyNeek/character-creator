@@ -3,4 +3,9 @@ class RacesController < ApplicationController
         races = Race.all 
         render json: races
     end
+
+    def show
+        race = Race.find(params[:id])
+        render json: race
+    end
 end

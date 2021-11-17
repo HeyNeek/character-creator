@@ -1,6 +1,5 @@
 class PlayerCharacterSerializer < ActiveModel::Serializer
-  attributes :id, :name, :image_url 
+  attributes :id, :race_id, :name, :image_url, :race
 
   belongs_to :user 
-  belongs_to :race 
 end

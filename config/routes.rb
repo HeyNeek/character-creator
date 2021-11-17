@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :users, only: [:index]
-  resources :races, only: [:index]
+  resources :users, only: [:index, :show]
+  resources :races, only: [:index, :show]
   resources :player_characters
 
   post '/signup', to: 'users#create'
