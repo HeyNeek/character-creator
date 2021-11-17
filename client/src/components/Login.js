@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-export default function Login({setLoginState, setUser}){
+export default function Login({setUser}){
     const [username, setUsername] = useState(null);
     const [password, setPassword] = useState(null);
     const [errors, setErrors] = useState([]);
@@ -17,7 +17,6 @@ export default function Login({setLoginState, setUser}){
           }).then((r) => {
             if (r.ok) {
               r.json().then((user) => setUser(user));
-              setLoginState(true);
             } else {
               r.json().then((err) => setErrors(err.errors));
             }

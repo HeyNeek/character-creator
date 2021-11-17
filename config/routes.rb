@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  resources :users, only: [:index]
   resources :races, only: [:index]
   resources :player_characters
 

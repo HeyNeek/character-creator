@@ -5,7 +5,6 @@ import Login from './components/Login';
 
 function App() {
   const [user, setUser] = useState(null);
-  const [loginState, setLoginState] = useState(false);
 
   useEffect(() => {
     // auto-login
@@ -16,11 +15,10 @@ function App() {
     });
   }, []);
 
-  if (!user) return <Login onLogin={setUser} />;
+  if (!user) return <Login setUser={setUser} />;
   return (
     <div>
-      {/* {loginState ? <Home user = {user}/> : <Login setUser={setUser} setLoginState = {setLoginState} />} */}
-      <Home user = {user}/>
+      <Home user = {user} setUser = {setUser}/>
     </div>
   );
 }
