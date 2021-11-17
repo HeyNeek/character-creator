@@ -25,10 +25,24 @@ code {
 
 #userGreeting {
   text-align: center;
+  font-family: 'EnchantedLand';
+  font-size: 50px;
 }
 
 #logoutButton {
   float: right;
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'EnchantedLand';
+}
+
+#logoutButton:hover {
+  color: red;
 }
 
 body {
@@ -40,6 +54,8 @@ body {
 #navbar {
   text-align: center;
   font-family: 'EnchantedLand';
+  background-image: url(https://media.istockphoto.com/photos/natural-wood-texture-picture-id1145602814?b=1&k=20&m=1145602814&s=170667a&w=0&h=geYq61xvfaKOQCn-RAOWTedracWeaSaTk-daFRw5PA8=);
+
 }
 
 .navlink {
@@ -47,6 +63,16 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   text-decoration: none;
+  color: gold;
+}
+
+.navlink:visited {
+  text-decoration: none;
+  color: gold;
+}
+
+.navlink:hover {
+  color:red;
 }
 
 @font-face {
