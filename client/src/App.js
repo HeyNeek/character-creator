@@ -11,6 +11,11 @@ function App() {
   const [user, setUser] = useState(null);
   const [characterList, setCharacterList] = useState([])
 
+  function addCharacter(character){
+    setCharacterList(prev => [character, ...prev])
+    console.log("works!")
+  }
+
   useEffect(() => {
     // auto-login
     fetch("/me").then((r) => {
@@ -31,7 +36,7 @@ function App() {
       <Navbar setUser = {setUser}/>
       <Switch>
           <Route path="/create">
-            <Create user = {user}/>
+            <Create user = {user} addCharacter = {addCharacter}/>
           </Route>
           <Route path="/gallery">
             <Gallery />

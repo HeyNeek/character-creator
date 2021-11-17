@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import RaceCard from './races';
 
-export default function GeneralInfo(){
+export default function GeneralInfo({setName, name, setImage, image, setRace}){
     const [raceList, setRaceList] = useState([])
 
     useEffect(() =>{
@@ -15,18 +15,17 @@ export default function GeneralInfo(){
     });
 }, [])
 
+
     // const races = raceList.map((race) => <raceCard/>)
 
     return ( 
 
         <form>
-            Name:<input/> <br/>
-            Image url: <input/> <br/>
+            Name:<input value = {name} onChange={(e) => setName(e.target.value)}/> <br/>
+            Image url: <input value = {image} onChange={(e) => setImage(e.target.value)}/> <br/>
             Please Select a race:
             
-            {raceList.map((race) => <RaceCard race = {race.name} key = {race.id}/>)}
-            
-            <button> Next</button>
+            {raceList.map((race) => <RaceCard race = {race} key = {race.id} setRace = {setRace}/>)}
 
         </form>
     )

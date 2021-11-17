@@ -1,10 +1,15 @@
 import React from 'react';
 
-export default function RaceCard({race}){
+export default function RaceCard({race, setRace}){
     
+    function handleClick(){
+        // console.log(race.id)
+        setRace(race.id)
+    }
+
     return(
-        <div>
-            <h1>{race} </h1>
+        <div onClick ={handleClick}>
+            <h1>{race.name} </h1>
         </div>
     )
 }
