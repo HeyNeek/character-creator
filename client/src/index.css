@@ -13,7 +13,8 @@ code {
 } */
 
 .userphoto {
-  height: 50px;
+  height: 150px;
+  width: 150px;
   padding-left: 10px;
 }
 
@@ -377,4 +378,44 @@ body {
 #creationSubmitButton:active {
   border-color: green;
   color: green;
+}
+
+#galleryH1 {
+  font-family: 'EnchantedLand';
+  font-size: 75px;
+  text-align: center;
+}
+
+.characterCard {
+  width: 500px;
+  height: 500px;
+  margin: 10px;
+  padding: 25px;
+  box-shadow:  0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  text-decoration: none;
+  font-family: 'EnchantedLand';
+  font-size: 50px;
+  background-image: url(https://www.framedimensions.com/wp-content/uploads/sites/21/2017/07/klimt1.png);
+  background-size: cover;
+  background-color: beige;
+}
+
+#characterList {
+  display: flex;
+  justify-content: center;
+}
+
+#showCharacter:visited {
+  text-decoration: none;
+  color: black;
+}
+
+#showCharacter:hover {
+  color: red;
+}
+
+#homeList {
+  display: flex;
+  justify-content: center;
 }

@@ -19,8 +19,10 @@ useEffect(() => {
 
     return(
         <div>
-            <h1>Gallery</h1>
-            {list}
+            <h1 id="galleryH1">Gallery</h1>
+            <div id="characterList">
+              {list}
+            </div>
         </div>
     )
 }

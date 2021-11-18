@@ -2,15 +2,16 @@ import React, {useState} from 'react';
 import { NavLink } from 'react-router-dom';
 
 export default function Charactercard({character}){
-
- 
    
     return(
-    <div>
+    <div className="characterCard">
+        <br/>
+        <br/>
         {character.name} {character.race.name} 
+        <br/>
         <img className = "userphoto" src={character.image_url}/>
-        <NavLink to={`/character/${character.id}`}> See Character</NavLink>
-        
+        <br/>
+        <NavLink id="showCharacter" to={`/character/${character.id}`}> See Character</NavLink>  
     </div>
     );
 

@@ -9,12 +9,13 @@ const characterlist = characterList.map((character) => <Charactercard character 
 
     return(
     <div>
-        <h2 id="userGreeting">Greetings {user.username}!<img className = "userphoto" src={user.image_url}/></h2>
+        <h2 id="userGreeting">Greetings {user.username}!<br/><img className = "userphoto" src={user.image_url}/></h2>
         <br/>
         {/* mapping here */}
         <h1 id="currentCharactersHome"> Your current characters </h1>
-
-        {characterlist}
+        <div id="homeList">
+          {characterlist}
+        </div>  
     </div>
     );
 
