@@ -9,28 +9,37 @@ export default function Login({setUser, setCharacterList}){
         e.preventDefault();
 
         fetch("/login", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ username, password }),
-          }).then((r) => {
-            if (r.ok) {
-              r.json().then((user) => {
-                setCharacterList(user.player_characters)
-                setUser(user)
-                console.log(user)
-              });
-            } else {
-              r.json().then((err) => setErrors(err.errors));
-            }
-          });
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, 
+            password}),
+        }).then((r) => {
+          if (r.ok) {
+            r.json().then((user) => {
+              setCharacterList(user.player_characters)
+              setUser(user)
+            });
+          } else {
+            r.json().then((err) => {setErrors(err.error)
+            console.log(err.error)
+            });
+          }
+        });
 
     }
    
     return(
     <div id="loginPage">
       Log in
+      <br/>
+      {errors}
+
+      {/* {errors.map((err) => (
+          <p key={err}>{err}</p>
+        ))} */}
+
         <form>
             Username:
             <input className="inputFields" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>

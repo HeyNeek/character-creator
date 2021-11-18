@@ -15,7 +15,10 @@ export default function SignUp({setUser, setCharacterList}){
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({ username, password }),
+            body: JSON.stringify({ username, 
+              password,
+              password_confirmation: passwordConfirmation,
+            image_url: imageUrl}),
           }).then((r) => {
             if (r.ok) {
               r.json().then((user) => {
@@ -32,6 +35,7 @@ export default function SignUp({setUser, setCharacterList}){
     return(
     <div id="signUpPage">
        Sign up!
+       {errors}
         <form>
             Username:
             <input className="inputFieldsSignUp" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>

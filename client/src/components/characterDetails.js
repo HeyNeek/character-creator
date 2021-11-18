@@ -5,7 +5,7 @@ import { useHistory } from 'react-router';
 export default function CharacterDetails({refresh}) {
     const [character, setCharacter] = useState([])
     const [race, setRace] = useState([])
-    const [user, setUser] = useState([])
+    const [userInfo, setUserInfo] = useState([])
     const [newImage, setNewImage] = useState("")
     const [updating, setUpdating] = useState(null)
     const {id} = useParams();
@@ -17,7 +17,7 @@ export default function CharacterDetails({refresh}) {
         .then((data) => {
             setCharacter(data)
             setRace(data.race)
-            setUser(data.user)
+            setUserInfo(data.user)
         })
 }, [])
 
@@ -74,8 +74,8 @@ function deleteCharacter(){
                 {updating ? "Cancel" : "Change Image"}  </button><br/>  
             {updating ?<form onSubmit={(e) => updateCharacter(e)}> <input value = {newImage} onChange={(e)=>setNewImage(e.target.value)}/><button> submit</button></form> : null   
             }
-            Player : {user.username} 
-            <img className = "userphoto" src = {user.image_url}/> 
+            Player : {userInfo.username} 
+            <img className = "userphoto" src = {userInfo.image_url}/> 
             Race: {race.name}
 
             <h1>Stats:</h1>
