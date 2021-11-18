@@ -52,7 +52,7 @@ function Create({user, addCharacter}){
             <form id="characterCreationForm" onSubmit = {handleSubmit}>
                 <GeneralInfo setName = {setName} name = {name} image = {image} setImage = {setImage} race = {race} setRace = {setRace}/>
                 <StatsCard setStrength = {setStrength} strength = {strength} setDexterity = {setDexterity} Dexterity = {Dexterity } setConstitution = {setConstitution} Constitution = {Constitution} setInteligence = {setInteligence} Inteligence = {Inteligence} setWisdom ={setWisdom} Wisdom = {Wisdom} setCharisma = {setCharisma} Charisma = {Charisma}/>
-                <button id="characterCreationFormButton"> Submit </button>
+                <div id="creationSubmitButtonContainer"><button id="creationSubmitButton"> Submit </button></div>
             </form>
         </div>
     )

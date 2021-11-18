@@ -24,26 +24,26 @@ else if (increment === "minus" && stat > 8)
 } 
 
 return(
-    <div className="stats">
+    <div id="stats">
     <h1>Points left: {Points} </h1>
-    <h2> Strength: 
-        <button onClick ={(e) => PointBuy(e, setStrength, strength,  "plus")}> ↑</button> 
-{strength} <button onClick ={(e) => PointBuy(e, setStrength, strength, "minus")}> ↓</button></h2> 
-    <h2> Dexterity: 
-    <button onClick ={(e) => PointBuy(e, setDexterity, Dexterity, "plus")}> ↑</button> 
-{Dexterity} <button onClick ={(e) => PointBuy(e, setDexterity, Dexterity, "minus")}> ↓</button></h2> 
-    <h2> Constitution: 
-    <button onClick ={(e) => PointBuy(e, setConstitution, Constitution, "plus")}> ↑</button> 
-{Constitution} <button onClick ={(e) => PointBuy(e, setConstitution, Constitution, "minus")}> ↓</button></h2>
-    <h2>Inteligence:  
-    <button onClick ={(e) => PointBuy(e, setInteligence, Inteligence, "plus")}> ↑</button> 
-{Inteligence} <button onClick ={(e) => PointBuy(e, setInteligence, Inteligence, "minus")}> ↓</button></h2>
-    <h2>Wisdom:  
-    <button onClick ={(e) => PointBuy(e, setWisdom, Wisdom, "plus")}> ↑</button> 
-{Wisdom} <button onClick ={(e) => PointBuy(e, setWisdom, Wisdom, "minus")}> ↓</button></h2>
-    <h2> Charisma:
-    <button onClick ={(e) => PointBuy(e,setCharisma, Charisma, "plus")}> ↑</button> 
-{Charisma} <button onClick ={(e) => PointBuy(e, setCharisma, Charisma, "minus")}> ↓</button></h2>
+    <h2> Strength:  
+        <button className="statButtons" onClick ={(e) => PointBuy(e, setStrength, strength,  "plus")}> ↑ </button> 
+{strength} <button className="statButtons" onClick ={(e) => PointBuy(e, setStrength, strength, "minus")}> ↓</button></h2> 
+    <h2> Dexterity:  
+    <button className="statButtons" onClick ={(e) => PointBuy(e, setDexterity, Dexterity, "plus")}> ↑ </button> 
+{Dexterity} <button className="statButtons" onClick ={(e) => PointBuy(e, setDexterity, Dexterity, "minus")}> ↓</button></h2> 
+    <h2> Constitution:  
+    <button className="statButtons" onClick ={(e) => PointBuy(e, setConstitution, Constitution, "plus")}> ↑ </button> 
+{Constitution} <button className="statButtons" onClick ={(e) => PointBuy(e, setConstitution, Constitution, "minus")}> ↓</button></h2>
+    <h2>Inteligence:   
+    <button className="statButtons" onClick ={(e) => PointBuy(e, setInteligence, Inteligence, "plus")}> ↑ </button> 
+{Inteligence} <button className="statButtons" onClick ={(e) => PointBuy(e, setInteligence, Inteligence, "minus")}> ↓</button></h2>
+    <h2>Wisdom:   
+    <button className="statButtons" onClick ={(e) => PointBuy(e, setWisdom, Wisdom, "plus")}> ↑ </button> 
+{Wisdom} <button className="statButtons" onClick ={(e) => PointBuy(e, setWisdom, Wisdom, "minus")}> ↓</button></h2>
+    <h2> Charisma: 
+    <button className="statButtons" onClick ={(e) => PointBuy(e,setCharisma, Charisma, "plus")}> ↑ </button> 
+{Charisma} <button className="statButtons" onClick ={(e) => PointBuy(e, setCharisma, Charisma, "minus")}> ↓</button></h2>
     </div>
 )
 }
