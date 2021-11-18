@@ -24,7 +24,7 @@ else if (increment === "minus" && stat > 8)
 } 
 
 return(
-    <div>
+    <div className="stats">
     <h1>Points left: {Points} </h1>
     <h2> Strength: 
         <button onClick ={(e) => PointBuy(e, setStrength, strength,  "plus")}> ↑</button> 

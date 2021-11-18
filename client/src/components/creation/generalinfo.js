@@ -15,15 +15,14 @@ export default function GeneralInfo({setName, name, setImage, image, setRace}){
     });
 }, [])
 
-
     // const races = raceList.map((race) => <raceCard/>)
 
     return ( 
 
         <form>
-            Name:<input value = {name} onChange={(e) => setName(e.target.value)}/> <br/>
-            Image url: <input value = {image} onChange={(e) => setImage(e.target.value)}/> <br/>
-            Please Select a race:
+            <p className="generalInfoFields">Name: </p> <input className="generalInfoFields" value = {name} onChange={(e) => setName(e.target.value)}/><br/>
+            <p className="generalInfoFields">Image URL: </p><input className="generalInfoFields" value = {image} onChange={(e) => setImage(e.target.value)}/> <br/>
+            <p className="generalInfoFields">Please Select a race: </p>
             
             {raceList.map((race) => <RaceCard race = {race} key = {race.id} setRace = {setRace}/>)}
 

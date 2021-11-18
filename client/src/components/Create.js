@@ -48,11 +48,11 @@ function Create({user, addCharacter}){
 
     return(
         <div>
-            <h1>Create</h1>
-        <form onSubmit = {handleSubmit}>
-            <GeneralInfo setName = {setName} name = {name} image = {image} setImage = {setImage} race = {race} setRace = {setRace}/>
-            <StatsCard setStrength = {setStrength} strength = {strength} setDexterity = {setDexterity} Dexterity = {Dexterity } setConstitution = {setConstitution} Constitution = {Constitution} setInteligence = {setInteligence} Inteligence = {Inteligence} setWisdom ={setWisdom} Wisdom = {Wisdom} setCharisma = {setCharisma} Charisma = {Charisma}/>
-            <button> submit </button>
+            <h1 id="characterCreationFormH1">Create</h1>
+            <form id="characterCreationForm" onSubmit = {handleSubmit}>
+                <GeneralInfo setName = {setName} name = {name} image = {image} setImage = {setImage} race = {race} setRace = {setRace}/>
+                <StatsCard setStrength = {setStrength} strength = {strength} setDexterity = {setDexterity} Dexterity = {Dexterity } setConstitution = {setConstitution} Constitution = {Constitution} setInteligence = {setInteligence} Inteligence = {Inteligence} setWisdom ={setWisdom} Wisdom = {Wisdom} setCharisma = {setCharisma} Charisma = {Charisma}/>
+                <button id="characterCreationFormButton"> Submit </button>
             </form>
         </div>
     )

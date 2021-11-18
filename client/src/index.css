@@ -275,3 +275,67 @@ body {
     left: 100%;
   }
 }
+
+#characterCreationFormH1 {
+  text-align: center;
+  font-family: 'EnchantedLand';
+  font-size: 75px;
+}
+
+#characterCreationForm {
+  width: 900px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 72px 55px 90px 55px;
+  margin: auto;
+  background-image: url(https://wallpaperaccess.com/full/88180.jpg);
+  background-size: cover;
+}
+
+.generalInfoFields {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  line-height: 1.2;
+  background: transparent;
+  border-color: black;
+  text-align: center;
+  font-family: 'IM Fell DW Pica', serif;
+  color: gold;
+  font-family: 'Chronos';
+  font-size: 30px;
+}
+
+.raceSelection:active {
+  color: green;
+}
+
+.raceSelection:hover {
+  cursor: pointer;
+}
+
+.raceSelection {
+  background-image: url("https://murals-weblinc.netdna-ssl.com/product_images/big-brown-wood-plank-wall-texture-background-17887014/5ec82f7dbd89dd0018f7779b/product_large_image.jpg?c=1590177661");
+  background-size: cover;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'firstorder';
+  border-color: black;
+  cursor: pointer;
+}
+
+.stats {
+  font-family: 'Chronos';
+  font-size: 25px;
+  text-align: center;
+  color: gold;
+}
+
+@font-face {
+  font-family: 'Chronos';
+  src: url(SongOfCoronos.ttf);
+}
