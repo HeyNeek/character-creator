@@ -11,9 +11,9 @@ function LandingPage({setUser, setCharacterList}){
         <div>
             <h1 id='landingPageH1'>Welcome to DnD character creator!</h1>
             <h2 id='landingPageH2'>Login to see your personal collection of characters! | Otherwise, sign up to start creating!</h2>
-            <div id='landingPageButtonContainer'><button className="landingPageButtons" onClick={() => setPageState(true)}>Login</button><button className="landingPageButtons" onClick={() => setPageState(false)}>Sign Up</button></div>
+            <div id='landingPageButtonContainer'><button className="landingPageButtons" onClick={() => setPageState(false)}>Login</button><button className="landingPageButtons" onClick={() => setPageState(true)}>Sign Up</button></div>
             
-             {pageState ? <Login setUser={setUser} setCharacterList = {setCharacterList} /> : <SignUp setUser={setUser} setCharacterList = {setCharacterList} />}
+             {!pageState ? <Login setUser={setUser} setCharacterList = {setCharacterList} /> : <SignUp setUser={setUser} setCharacterList = {setCharacterList} />}
         </div>
     )
 }

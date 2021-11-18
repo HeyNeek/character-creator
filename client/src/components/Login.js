@@ -30,6 +30,7 @@ export default function Login({setUser, setCharacterList}){
    
     return(
     <div id="loginPage">
+      Log in
         <form>
             Username:
             <input className="inputFields" type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
