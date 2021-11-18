@@ -389,7 +389,6 @@ body {
 .characterCard {
   width: 500px;
   height: 500px;
-  margin: 10px;
   padding: 25px;
   box-shadow:  0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.12);
   text-align: center;
@@ -403,6 +402,7 @@ body {
 
 #characterList {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -417,5 +417,6 @@ body {
 
 #homeList {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
