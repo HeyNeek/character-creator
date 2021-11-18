@@ -21,7 +21,7 @@ function Create({user, addCharacter}){
          user_id: user.id,
          name: name,
          image_url: image,
-         race_id: race,
+         race_id: race.id,
          strength: strength,
          dex: Dexterity,
          con: Constitution,
@@ -45,12 +45,17 @@ function Create({user, addCharacter}){
     })
  }
 
+ const currentRace = race ? race.name : "none"
+
 
     return(
         <div>
             <h1 id="characterCreationFormH1">Create</h1>
             <form id="characterCreationForm" onSubmit = {handleSubmit}>
                 <GeneralInfo setName = {setName} name = {name} image = {image} setImage = {setImage} race = {race} setRace = {setRace}/>
+
+                <h1 id="stats">Current race: {currentRace} </h1>
+
                 <StatsCard setStrength = {setStrength} strength = {strength} setDexterity = {setDexterity} Dexterity = {Dexterity } setConstitution = {setConstitution} Constitution = {Constitution} setInteligence = {setInteligence} Inteligence = {Inteligence} setWisdom ={setWisdom} Wisdom = {Wisdom} setCharisma = {setCharisma} Charisma = {Charisma}/>
                 <div id="creationSubmitButtonContainer"><button id="creationSubmitButton"> Submit </button></div>
             </form>

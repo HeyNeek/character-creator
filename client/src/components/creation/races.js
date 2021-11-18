@@ -4,12 +4,13 @@ export default function RaceCard({race, setRace}){
     
     function handleClick(e){
         e.preventDefault()
-        setRace(race.id)
+        setRace(race)
     }
 
     return(
         <>
             <button onClick ={handleClick} className="raceSelection">{race.name} </button>
+            
         </>
     )
 }
