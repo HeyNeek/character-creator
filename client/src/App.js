@@ -52,7 +52,7 @@ function App() {
       <Navbar setUser = {setUser}/>
       <Switch>
       <Route path ="/character/:id"> 
-          <CharacterDetails refresh = {refresh}/>
+          <CharacterDetails refresh = {refresh} user = {user}/>
         </Route>
           <Route path="/create">
             <Create user = {user} addCharacter = {addCharacter}/>

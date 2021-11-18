@@ -45,7 +45,7 @@ function Create({user, addCharacter}){
     })
  }
 
- const currentRace = race ? race.name : "none"
+ const currentRace = race ? race.name : "None"
 
 
     return(

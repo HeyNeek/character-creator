@@ -2,12 +2,13 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom"
 import { useHistory } from 'react-router';
 
-export default function CharacterDetails({refresh}) {
+export default function CharacterDetails({refresh, user}) {
     const [character, setCharacter] = useState([])
     const [race, setRace] = useState([])
     const [userInfo, setUserInfo] = useState([])
     const [newImage, setNewImage] = useState("")
     const [updating, setUpdating] = useState(null)
+    const [sameUser, setSameUser] = useState(false)
     const {id} = useParams();
     const history = useHistory();
 
@@ -18,6 +19,7 @@ export default function CharacterDetails({refresh}) {
             setCharacter(data)
             setRace(data.race)
             setUserInfo(data.user)
+            if(user.id === data.user.id) setSameUser(true)
         })
 }, [])
 
@@ -70,8 +72,11 @@ function deleteCharacter(){
     return(
         <div>
             <h1>{character.name}</h1>
-            <img src = {character.image_url}/> <button onClick={() => setUpdating(prev => !prev)}>
-                {updating ? "Cancel" : "Change Image"}  </button><br/>  
+            <img src = {character.image_url}/> 
+            {sameUser ? <button onClick={() => setUpdating(prev => !prev)}>
+                {updating ? "Cancel" : "Change Image"}  </button> : null}
+            <br/> 
+
             {updating ?<form onSubmit={(e) => updateCharacter(e)}> <input value = {newImage} onChange={(e)=>setNewImage(e.target.value)}/><button> submit</button></form> : null   
             }
             Player : {userInfo.username} 
@@ -87,7 +92,8 @@ function deleteCharacter(){
             <h3>Wisdom: {character.wisdom} </h3>
             <h3>Charisma: {character.charisma}</h3>
 
-            <button onClick={deleteCharacter}>🗑️ </button>
+            {sameUser ? <button onClick={deleteCharacter}>🗑️ </button> : null}
+            
         </div>
     )
     
