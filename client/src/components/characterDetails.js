@@ -70,18 +70,20 @@ function deleteCharacter(){
 }
 
     return(
-        <div>
+        <>
+        <br/>
+        <br/>
+        <div id="characterDetailContainer">
             <h1>{character.name}</h1>
-            <img src = {character.image_url}/> 
+            <img id="characterDetailImage" src = {character.image_url}/>
+            <br/> 
             {sameUser ? <button onClick={() => setUpdating(prev => !prev)}>
-                {updating ? "Cancel" : "Change Image"}  </button> : null}
+            {updating ? "Cancel" : "Change Image"}  </button> : null}
             <br/> 
 
-            {updating ?<form onSubmit={(e) => updateCharacter(e)}> <input value = {newImage} onChange={(e)=>setNewImage(e.target.value)}/><button> submit</button></form> : null   
-            }
-            Player : {userInfo.username} 
-            <img className = "userphoto" src = {userInfo.image_url}/> 
-            Race: {race.name}
+            {updating ?<form onSubmit={(e) => updateCharacter(e)}> <input value = {newImage} onChange={(e)=>setNewImage(e.target.value)}/><button> submit</button></form> : null }
+            <h2>Player : {userInfo.username} </h2>
+            <h2>Race: {race.name}</h2>
 
             <h1>Stats:</h1>
 
@@ -95,6 +97,7 @@ function deleteCharacter(){
             {sameUser ? <button onClick={deleteCharacter}>🗑️ </button> : null}
             
         </div>
+        </>
     )
     
 }

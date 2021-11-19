@@ -57,8 +57,7 @@ body {
 #navbar {
   text-align: center;
   font-family: 'EnchantedLand';
-  background-image: url(https://media.istockphoto.com/photos/natural-wood-texture-picture-id1145602814?b=1&k=20&m=1145602814&s=170667a&w=0&h=geYq61xvfaKOQCn-RAOWTedracWeaSaTk-daFRw5PA8=);
-
+  background-image: url("./woodtexture.jpeg");
 }
 
 .navlink {
@@ -419,4 +418,25 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+#characterDetailContainer {
+  top: 400px;
+  width: 900px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 72px 55px 90px 55px;
+  margin: auto;
+  background-image: url(https://wallpaperaccess.com/full/88180.jpg);
+  background-size: cover;
+  color: gold;
+  text-align: center;
+  font-family: 'Chronos';
+  font-size: 25px;
+}
+
+#characterDetailImage {
+  width: 250px;
+  height: 250px;
 }
