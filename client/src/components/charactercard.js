@@ -7,7 +7,7 @@ export default function Charactercard({character}){
     <div className="characterCard">
         <br/>
         <br/>
-        {character.name} {character.race.name} 
+        {character.name}
         <br/>
         <img className = "userphoto" src={character.image_url}/>
         <br/>

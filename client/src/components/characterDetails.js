@@ -77,11 +77,11 @@ function deleteCharacter(){
             <h1>{character.name}</h1>
             <img id="characterDetailImage" src = {character.image_url}/>
             <br/> 
-            {sameUser ? <button onClick={() => setUpdating(prev => !prev)}>
+            {sameUser ? <button className="updateButtons" onClick={() => setUpdating(prev => !prev)}>
             {updating ? "Cancel" : "Change Image"}  </button> : null}
             <br/> 
 
-            {updating ?<form onSubmit={(e) => updateCharacter(e)}> <input value = {newImage} onChange={(e)=>setNewImage(e.target.value)}/><button> submit</button></form> : null }
+            {updating ?<form onSubmit={(e) => updateCharacter(e)}> <input id="updateField" value = {newImage} onChange={(e)=>setNewImage(e.target.value)}/><br/><button className="updateButtons">Submit</button></form> : null }
             <h2>Player : {userInfo.username} </h2>
             <h2>Race: {race.name}</h2>
 
@@ -94,7 +94,7 @@ function deleteCharacter(){
             <h3>Wisdom: {character.wisdom} </h3>
             <h3>Charisma: {character.charisma}</h3>
 
-            {sameUser ? <button onClick={deleteCharacter}>🗑️ </button> : null}
+            {sameUser ? <button id="deleteButton" onClick={deleteCharacter}>🗑️ </button> : null}
             
         </div>
         </>
