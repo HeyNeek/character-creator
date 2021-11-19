@@ -405,6 +405,10 @@ body {
   justify-content: center;
 }
 
+#showCharacter {
+  color: black;
+}
+
 #showCharacter:visited {
   text-decoration: none;
   color: black;
@@ -422,7 +426,7 @@ body {
 
 #characterDetailContainer {
   top: 400px;
-  width: 900px;
+  width: 700px;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
